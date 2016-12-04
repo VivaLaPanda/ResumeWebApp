@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Resumes</title>
+    </head>
+    <body>
+        <h1>Resumes</h1>
+        <table border="1">
+            <tr><th>School ID</th><th>Name</th><th>address_id</th></tr>
+            <% for(var i=0; result.length > i; i++ ) { %>
+            <tr>
+                <td><%= result[i].resume_id%></td>
+                <td><a href="/resume/?resume_id=<%= result[i].resume_id %>"><%= result[i].resume_name %></a></td>
+                <td><%= result[i].address_id %></td>
+            </tr>
+            <% } %>
+        </table>
+    </body>
+
+</html>

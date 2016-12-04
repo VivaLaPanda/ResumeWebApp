@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Skills</title>
+    </head>
+    <body>
+        <h1>Skills</h1>
+        <table border="1">
+            <tr><th>School ID</th><th>Name</th><th>address_id</th></tr>
+            <% for(var i=0; result.length > i; i++ ) { %>
+            <tr>
+                <td><%= result[i].skill_id%></td>
+                <td><a href="/skill/?skill_id=<%= result[i].skill_id %>"><%= result[i].skill_name %></a></td>
+                <td><%= result[i].address_id %></td>
+            </tr>
+            <% } %>
+        </table>
+    </body>
+
+</html>
