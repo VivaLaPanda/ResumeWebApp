@@ -1,0 +1,35 @@
+<%- include("../includes/header.ejs", {title: "Update " + company.company_name}); %>
+
+<h1>Update <%= company.company_name%></h1>
+<form action="/company/update" method="get">
+    <input type="hidden" id="company_id" name="company_id" value="<%= company.company_id %>">
+    Company Name: <input id="company_name" name="company_name" type="text" value="<%= company.company_name%>"/>
+    <br />
+    <br />
+    Address <br />
+    <select id="address_id" name="address_id" multiple="multiple">
+        <% for(var i=0; address.length > i; i++ ) {
+            var selected = "";
+
+            if(address[i].company_id != null) {
+                selected = "selected";
+            }
+        %>
+        <option value="<%= address[i].address_id %>" <%= selected %> ><%= address[i].street + ', ' + address[i].zipcode %></option>
+        <% } %>
+    </select>
+
+    <!-- Initialize the multiselect plugin: -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#address_id').multiselect();
+        });
+    </script>
+
+    <br />
+
+    <input type="submit" />
+
+</form>
+
+<%- include("../includes/footer.ejs"); %>

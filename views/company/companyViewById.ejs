@@ -1,13 +1,16 @@
-<html>
-<head>
-    <title>Company - <%= result[0].company_name %></title>
-</head>
-<body>
-    <h1>Company</h1>
+<%- include("../includes/header.ejs", {title:"Companies - " + result[0].company_name}); %>
+    <h1>Companies</h1>
     <ul>
-        <li>Company Name: <%= result[0].company_name%></li>
-        <li>Company ID: <%= result[0].company_id%></li>
+        <li>Company Name: <%= result[0].company_name %></li>
+        <li>Address(es):
+            <ul>
+                <% for(var i=0; result.length > i; i++ ) { %>
+                    <li><%= result[i].street + ', ' + result[i].zipcode %></li>
+                <% } %>
+            </ul>
+        </li>
     </ul>
-</body>
 
-</html>
+<a href="/company/all"><< back</a>
+
+<%- include("../includes/footer.ejs"); %>

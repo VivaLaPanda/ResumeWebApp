@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Update <%= school.school_name%></title>
+</head>
+<body>
+<h1>Update <%= school.school_name%></h1>
+<form action="/school/update" method="get">
+    <input type="hidden" id="school_id" name="school_id" value="<%= school.school_id %>">
+    School Name: <input id="school_name" name="school_name" type="text" value="<%= school.school_name%>"/>
+    <br />
+    <br />
+    Address
+    <select id="address_id" name="address_id">
+        <% for(var i=0; address.length > i; i++ ) {
+            var selected = "";
+            if(address[i].address_id == school.school_id) {
+                selected = "selected";
+            }
+        %>
+        <option value="<%= address[i].address_id %>" <%= selected %>><%= address[i].street + ', ' + address[i].zipcode %></option>
+        <% } %>
+    </select>
+
+    <br />
+
+    <input type="submit" />
+
+</form>
+</body>
+
+</html>

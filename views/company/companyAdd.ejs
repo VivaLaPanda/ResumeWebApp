@@ -1,15 +1,29 @@
-<html>
-<head>
-    <title>Add New Company</title>
-</head>
-<body>
+<%- include("../includes/header.ejs", {title:"Add New Company"}); %>
+
     <h1>Add New Company</h1>
     <form action="/company/insert" method="get">
         Company Name: <input id="company_name" name="company_name" type="text" />
-		
+        <br />
+        <br />
+        Address
+        <br />
+        <select id="address_id" name="address_id" multiple="multiple">
+            <% for(var i=0; address.length > i; i++ ) { %>
+                <option value="<%= address[i].address_id %>"><%= address[i].street + ', ' + address[i].zipcode %></option>
+            <% } %>
+        </select>
+
+        <!-- Initialize the multiselect plugin: -->
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#address_id').multiselect();
+            });
+        </script>
+
+
+        <br />
         <input type="submit" />
 
     </form>
-</body>
 
-</html>
+<%- include("../includes/footer.ejs"); %>

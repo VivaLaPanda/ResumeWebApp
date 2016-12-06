@@ -1,24 +1,24 @@
-<html>
-    <head>
-        <title>Companies</title>
-    </head>
-    <body>
-        <h1>Companies</h1>
+<%- include("../includes/header.ejs", {title:"Company - View All"}); %>
+
+<h1>Companies</h1>
         <a href="/company/add">Add New Company</a> <br />
-		<br>
+
+        <br />
+
         <table border="1">
-            <tr><th>Company Name</th><th>Action</th></tr>
+            <tr><th>Name</th><th>Actions</th></tr>
             <% for(var i=0; result.length > i; i++ ) { %>
             <tr>
                 <td><a href="/company/?company_id=<%= result[i].company_id %>"><%= result[i].company_name %></a></td>
-                <td><form action="/company/delete/">
+                <td>
+                    <button onclick="event.preventDefault();window.location.href='/company/edit/?company_id=<%= result[i].company_id %>'">Edit</button>
+                    <form action="/company/delete/" style="display:inline;">
                         <input type="hidden" name="company_id" id="company_id" value="<%= result[i].company_id %>" />
                         <input type="submit" value="Delete"/>
                     </form>
+
                 </td>
             </tr>
             <% } %>
         </table>
-    </body>
-
-</html>
+<%- include("../includes/footer.ejs"); %>
