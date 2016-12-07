@@ -1,23 +1,65 @@
-<html>
-<head>
-    <title>Add New Resume</title>
-</head>
-<body>
+<%- include("../includes/header.ejs", {title:"Add New Resume"}); %>
+
     <h1>Add New Resume</h1>
     <form action="/resume/insert" method="get">
         Resume Name: <input id="resume_name" name="resume_name" type="text" />
         <br />
+		<br />
+		Account Name:<br>
+		<select id="account" name="user_account_id">
+            <% for(var i=0; accounts.length > i; i++ ) { %>
+                <option value="<%= accounts[i].account_id %>"><%= accounts[i].first_name +' '+ accounts[i].last_name %></option>
+            <% } %>
+        </select>
+		<br />
+        <br />
+        Skills
+        <br />
+        <select id="skill" name="skill_id" multiple="skill_id">
+            <% for(var i=0; skills.length > i; i++ ) { %>
+                <option value="<%= skills[i].skill_id %>"><%= skills[i].skill_name %></option>
+            <% } %>
+        </select>
 		<br>
-        Account
-        <select id="user_account_id" name="user_account_id">
-            <% for(var i=0; account.length > i; i++ ) { %>
-                <option value="<%= account[i].account_id %>"><%= account[i].first_name + ', ' + account[i].first_name %></option>
+		<br>
+        Companies
+        <br />
+        <select id="company" name="company_id" multiple="multiple">
+            <% for(var i=0; companies.length > i; i++ ) { %>
+                <option value="<%= companies[i].company_id %>"><%= companies[i].company_name %></option>
+            <% } %>
+        </select>
+		<br>
+		<br>
+        Schools
+        <br />
+        <select id="school" name="school_id" multiple="multiple">
+            <% for(var i=0; schools.length > i; i++ ) { %>
+                <option value="<%= schools[i].school_id %>"><%= schools[i].school_name %></option>
             <% } %>
         </select>
 
+        <!-- Initialize the multiselect plugin: -->
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#skill').multiselect();
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#company').multiselect();
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#school').multiselect();
+            });
+        </script>
+
+
+        <br />
         <input type="submit" />
 
     </form>
-</body>
 
-</html>
+<%- include("../includes/footer.ejs"); %>

@@ -1,0 +1,101 @@
+<%- include("../includes/header.ejs", {title:"Update Resume"}); %>
+
+    <h1>Update <%= resume[0].resume_name %></h1>
+    <form action="/resume/update" method="get">
+		<input type="hidden" id="resume_id" name="resume_id" value="<%= resume[0].resume_id %>">
+        Resume Name: <input id="resume_name" name="resume_name" type="text" value="<%= resume[0].resume_name %>"/>
+        <br />
+		<br />
+		Account Name:<br>
+		<select id="account" name="user_account_id">
+            <% for(var i=0; accounts.length > i; i++ ) { 
+				var selected = "";
+
+				if(accounts[i].resume_id != null) {
+					selected = "selected";
+				}
+			%>
+                <option value="<%= accounts[i].account_id %>" <%= selected %>><%= accounts[i].first_name +' '+ accounts[i].last_name %></option>
+            <% } %>
+        </select>
+		<br />
+        <br />
+        Skills
+        <br />
+        <select id="skill" name="skill_id" multiple="skill_id">
+            <% for(var i=0; skills.length > i; i++ ) { 
+				var selected = "";
+				
+				resume.forEach(function(element) {
+					if (skills[i].skill_name == element.skill_name && skills[i].skill_name) {
+						selected = "selected";
+					}
+				});
+			%>
+                <option value="<%= skills[i].skill_id %>" <%= selected %> ><%= skills[i].skill_name %></option>
+            <% } %>
+        </select>
+		<br>
+		<br>
+        Companies
+        <br />
+        <select id="company" name="company_id" multiple="multiple">
+            <% for(var i=0; companies.length > i; i++ ) { 
+				var selected = "";
+				
+				resume.forEach(function(element) {
+					console.log("school", element);
+					console.log("schoolname1", companies[i].company_name);
+					console.log("schoolname1", element.company_name);
+					if (companies[i].company_name == element.company_name && companies[i].company_name) {
+						console.log("selecting");
+						selected = "selected";
+					}
+				});
+			%>
+                <option value="<%= companies[i].company_id %>" <%= selected %> ><%= companies[i].company_name %></option>
+            <% } %>
+        </select>
+		<br>
+		<br>
+        Schools
+        <br />
+        <select id="school" name="school_id" multiple="multiple">
+            <% for(var i=0; schools.length > i; i++ ) { 
+				var selected = "";
+
+				resume.forEach(function(element) {
+					if (schools[i].school_name == element.school_name && schools[i].school_name) {
+						console.log("selecting");
+						selected = "selected";
+					}
+				});
+			%>
+                <option value="<%= schools[i].school_id %>" <%= selected %> ><%= schools[i].school_name %></option>
+            <% } %>
+        </select>
+
+        <!-- Initialize the multiselect plugin: -->
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#skill').multiselect();
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#company').multiselect();
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#school').multiselect();
+            });
+        </script>
+
+
+        <br />
+        <input type="submit" />
+
+    </form>
+
+<%- include("../includes/footer.ejs"); %>

@@ -6,7 +6,7 @@ var connection = mysql.createConnection(db.config);
 
 /*
  create or replace view account_view as
- select s.*, a.street, a.zipcode from account s
+ select s.*, a.street, a.zip_code from account s
  join address a on a.address_id = s.address_id;
 
  */
@@ -40,6 +40,16 @@ exports.insert = function(params, callback) {
     });
 
 }
+
+exports.update = function(params, callback) {
+    var query = 'UPDATE account SET first_name = ?, last_name = ?, email = ? WHERE account_id = ?';
+
+    var queryData = [params.first_name, params.last_name, params.email, params.account_id];
+
+    connection.query(query, queryData, function(err, result) {
+		callback(err, result);
+	});
+};
 
 exports.delete = function(account_id, callback) {
     var query = 'DELETE FROM account WHERE account_id = ?';

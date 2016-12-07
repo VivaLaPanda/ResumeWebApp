@@ -13,7 +13,7 @@
             <% for(var i=0; result.length > i; i++ ) { %>
             <tr>
                 <td><a href="/school/?school_id=<%= result[i].school_id %>"><%= result[i].school_name %></a></td>
-                <td><%= result[i].street %>, <%= result[i].zipcode %></td>
+                <td><%= result[i].street %>, <%= result[i].zip_code %></td>
                 <td>
                     <button onclick="event.preventDefault();window.location.href='/school/edit2/?school_id=<%= result[i].school_id %>'">Edit</button>
                     <form action="/school/delete/" style="display:inline;">

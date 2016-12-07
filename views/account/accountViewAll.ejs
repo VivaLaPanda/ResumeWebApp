@@ -7,13 +7,15 @@
         <a href="/account/add">Add New Account</a> <br />
 		<br>
         <table border="1">
-            <tr><th>Email</th><th>First Name</th><th>Last Name</th><th>Action</th></tr>
+            <tr><th>First Name</th><th>Last Name</th><th>Email</th><th>Action</th></tr>
             <% for(var i=0; result.length > i; i++ ) { %>
             <tr>
                 <td><a href="/account/?account_id=<%= result[i].account_id %>"><%= result[i].first_name %></a></td>
                 <td><%= result[i].last_name %></td>
                 <td><%= result[i].email%></td>
-                <td><form action="/account/delete/">
+                <td>
+					<button onclick="event.preventDefault();window.location.href='/account/edit/?account_id=<%= result[i].account_id %>'">Edit</button>
+					<form action="/account/delete/">
                         <input type="hidden" name="account_id" id="account_id" value="<%= result[i].account_id %>" />
                         <input type="submit" value="Delete"/>
                     </form>

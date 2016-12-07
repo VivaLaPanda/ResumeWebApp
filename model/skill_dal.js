@@ -6,7 +6,7 @@ var connection = mysql.createConnection(db.config);
 
 /*
  create or replace view skill_view as
- select s.*, a.street, a.zipcode from skill s
+ select s.*, a.street, a.zip_code from skill s
  join address a on a.address_id = s.address_id;
 
  */
